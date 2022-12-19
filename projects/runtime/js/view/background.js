@@ -27,7 +27,7 @@ var background = function (window) {
         
         // ANIMATION VARIABLES HERE:
         var tree;
-     var buildings = [];
+        var buildings = [];
         // called at the start of game and whenever the page is resized
         // add objects for display in background. draws each image added to the background once
         function render() {
@@ -85,10 +85,12 @@ var background = function (window) {
             }
             
             // TODO 5: Part 2 - Parallax
-            for (var i = 0; i < myArray.length; i++){
-                var eachElement = myArray[i];
-                
-                
+            for (var i = 0; i < buildings.length; i++){
+                var eachElement = buildings[i];
+                eachElement.x = eachElement.x -1.5;
+                if (eachElement.x < -200){
+                    eachElement.x = canvasWidth
+                }
                 //code to do something with each element 
             }
 
